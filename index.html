@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LD lab podology — Любовь Казнакова и Дина Джабали | Подология Минск</title>
+    <meta name="description" content="LD lab podology — забота о стопах для всей семьи в Минске. Подолог Любовь Казнакова и Дина Джабали. Обработка и восстановление ногтей, стоп. Маникюр и педикюр.">
+    <meta name="keywords" content="подолог Минск, подология, обработка вросших ногтей, маникюр Минск, педикюр Минск, Любовь Казнакова, Дина Джабали, LD lab podology">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="LD lab podology — Подология Минск">
+    <meta property="og:description" content="Забота о стопах для всей семьи. Профессиональная обработка и восстановление. Запись онлайн.">
+    <meta property="og:type" content="website">
+    
+    <style>
+        :root {
+            --primary: #EEDEE8;
+            --primary-dark: #C8A4B4;
+            --white: #FFFFFF;
+            --text: #333333;
+            --text-light: #666666;
+            --shadow: rgba(0,0,0,0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--white);
+            overflow-x: hidden;
+        }
+        
+        /* Навигация */
+        nav {
+            background: var(--white);
+            box-shadow: 0 2px 10px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-dark);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--text);
+        }
+        
+        /* Герой секция */
+        .hero {
+            background: linear-gradient(135deg, var(--white) 0%, var(--primary) 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--primary-dark);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(200, 164, 180, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-dark);
+            color: var(--primary-dark);
+            margin-left: 1rem;
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary-dark);
+            color: var(--white);
+        }
+        
+        /* Контейнер */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Секции */
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            color: var(--text);
+        }
+        
+        /* О кабинете */
+        .about-clinic {
+            background: var(--white);
+        }
+        
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+        
+        .about-text p {
+            margin-bottom: 1rem;
+        }
+        
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .principle-item {
+            background: linear-gradient(135deg, var(--primary), var(--white));
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text);
+        }
+        
+        .principle-item .icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Наш кабинет */
+        .cabinet {
+            background: linear-gradient(to bottom, var(--white), var(--primary));
+        }
+        
+        .cabinet-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+        
+        .cabinet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .cabinet-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: transform 0.3s;
+            border: 2px solid var(--primary);
+            background: var(--white);
+            cursor: pointer;
+        }
+        
+        .cabinet-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(200, 164, 180, 0.3);
+        }
+        
+        .cabinet-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s;
+        }
+        
+        .cabinet-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .cabinet-item.featured {
+            grid-column: span 2;
+        }
+        
+        .cabinet-item.featured img {
+            height: 300px;
+        }
+        
+        .cabinet-caption {
+            padding: 1rem;
+            background: var(--white);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        /* О мастерах */
+        .about-masters {
+            background: linear-gradient(to bottom, var(--primary), var(--white));
+        }
+        
+        .masters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .master-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 5px 30px var(--shadow);
+            transition: transform 0.3s;
+            border: 2px solid var(--primary);
+        }
+        
+        .master-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .master-photo {
+            width: 160px;
+            height: 200px;
+            border-radius: 20px;
+            object-fit: cover;
+            object-position: center top;
+            margin: 0 auto 1.5rem;
+            border: 4px solid var(--primary);
+            box-shadow: 0 5px 20px var(--shadow);
+        }
+        
+        .master-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .master-role {
+            color: var(--primary-dark);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .master-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        /* Услуги */
+        .services {
+            background: var(--white);
+        }
+        
+        .services-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, var(--white), #faf5f7);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 3px 20px var(--shadow);
+            border: 1px solid var(--primary);
+        }
+        
+        .service-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .price-list {
+            list-style: none;
+        }
+        
+        .price-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px dashed #eee;
+            gap: 1rem;
+        }
+        
+        .price-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .price {
+            font-weight: 600;
+            color: var(--primary-dark);
+            white-space: nowrap;
+        }
+        
+        .price-note {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        
+        .cases-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .cases-list li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-light);
+        }
+        
+        .cases-list li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: var(--primary-dark);
+        }
+        
+        /* Галерея */
+        .gallery {
+            background: linear-gradient(to bottom, var(--primary), var(--white));
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: transform 0.3s;
+            border: 2px solid var(--primary);
+            background: var(--white);
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(200, 164, 180, 0.3);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            padding: 1.2rem;
+            background: var(--white);
+            text-align: center;
+        }
+        
+        .gallery-caption h4 {
+            color: var(--primary-dark);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .gallery-caption p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        /* Лайтбокс */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .lightbox img {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        
+        .lightbox-caption {
+            color: var(--white);
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .lightbox-caption h4 {
+            margin-bottom: 0.3rem;
+        }
+        
+        .lightbox-caption p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: var(--white);
+            font-size: 2.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            line-height: 1;
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--white);
+            font-size: 3rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0 1rem;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        
+        .lightbox-nav:hover {
+            opacity: 1;
+        }
+        
+        .lightbox-prev {
+            left: -60px;
+        }
+        
+        .lightbox-next {
+            right: -60px;
+        }
+        
+        /* Контакты */
+        .contacts {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--white) 100%);
+        }
+        
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .contact-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 30px var(--shadow);
+        }
+        
+        .contact-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            flex-shrink: 0;
+        }
+        
+        .contact-item a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            color: var(--primary-dark);
+        }
+        
+        /* Карта */
+        .map-container {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px var(--shadow);
+        }
+        
+        #yandex-map {
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+        }
+        
+        /* Футер */
+        footer {
+            background: var(--text);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: white;
+                padding: 1rem;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+                gap: 1rem;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links a {
+                padding: 0.5rem 0;
+                display: block;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+            
+            .hero .btn {
+                display: block;
+                margin: 0.5rem auto;
+                width: 100%;
+                max-width: 280px;
+            }
+            
+            section {
+                padding: 2.5rem 0;
+            }
+            
+            .section-title {
+                font-size: 1.7rem;
+                margin-bottom: 2rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .principles {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .cabinet-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cabinet-item.featured {
+                grid-column: span 1;
+            }
+            
+            .cabinet-item.featured img,
+            .cabinet-item img {
+                height: 220px;
+            }
+            
+            .masters-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .master-card {
+                padding: 1.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .service-card {
+                padding: 1.5rem;
+            }
+            
+            .price-list li {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .gallery-item img {
+                height: auto;
+                max-height: 400px;
+            }
+            
+            .contacts-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact-card {
+                padding: 1.5rem;
+            }
+            
+            .lightbox-prev,
+            .lightbox-next {
+                display: none;
+            }
+            
+            .lightbox-close {
+                top: -50px;
+                right: 0;
+            }
+            
+            #yandex-map {
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .logo {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">✨ LD lab podology</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">О кабинете</a></li>
+                <li><a href="#cabinet">Кабинет</a></li>
+                <li><a href="#masters">Мастера</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#gallery">Динамики</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+            <button class="mobile-menu" id="mobileMenuBtn" aria-label="Меню">☰</button>
+        </div>
+    </nav>
+    
+    <!-- Герой -->
+    <section class="hero">
+        <h1>LD lab podology</h1>
+        <div class="subtitle">Забота о стопах для всей семьи</div>
+        <p>Представьте: вы приходите в уютный светлый кабинет. Вас не торопят. Не делают больно. Просто помогают — профессионально и с душой.</p>
+        <a href="https://dikidi.net/2047090" target="_blank" class="btn">📝 Записаться онлайн</a>
+        <a href="tel:+375447025572" class="btn btn-outline">📞 Позвонить</a>
+    </section>
+    
+    <!-- О кабинете -->
+    <section class="about-clinic" id="about">
+        <div class="container">
+            <h2 class="section-title">О нашем кабинете</h2>
+            <div class="about-text">
+                <p>LD lab podology — это место, где вашим стопам будет хорошо. Мы работаем со сложными случаями: вросшие ногти, бородавки, ногти любой сложности, трещины, мозоли, натоптыши и многое другое.</p>
+                <p>На первичной консультации проводим функциональные тесты, которые помогают выявить проблемы и грамотно составить план восстановления. Можем изготовить индивидуальные стельки и ортезы.</p>
+                <p>Если проблема требует врача — честно скажем и направим. Мы не занимаемся лечением — мы занимаемся обработкой и восстановлением.</p>
+                <p>📍 Минск. Для детей и взрослых. Приходите 💛</p>
+            </div>
+            
+            <div class="principles">
+                <div class="principle-item">
+                    <span class="icon">🧤</span>
+                    Всё одноразовое
+                </div>
+                <div class="principle-item">
+                    <span class="icon">✨</span>
+                    Полная стерилизация инструментов
+                </div>
+                <div class="principle-item">
+                    <span class="icon">💛</span>
+                    Без боли и страха
+                </div>
+                <div class="principle-item">
+                    <span class="icon">🎯</span>
+                    Не поток, а качество
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Наш кабинет -->
+    <section class="cabinet" id="cabinet">
+        <div class="container">
+            <h2 class="section-title">Наш кабинет</h2>
+            <p class="cabinet-intro">
+                Уютное светлое пространство, где вам будет комфортно. Всё продумано для вашего спокойствия: от уютного кресла до зоны дезинфекции и стерилизации инструментов.
+            </p>
+            <div class="cabinet-grid">
+                <div class="cabinet-item featured" onclick="openCabinetLightbox(0)">
+                    <img src="cabinet3.jpg" alt="Общий вид кабинета">
+                    <div class="cabinet-caption">Просторный светлый кабинет</div>
+                </div>
+                <div class="cabinet-item" onclick="openCabinetLightbox(1)">
+                    <img src="cabinet1.jpg" alt="Зона ожидания">
+                    <div class="cabinet-caption">Уютная зона ожидания</div>
+                </div>
+                <div class="cabinet-item" onclick="openCabinetLightbox(2)">
+                    <img src="cabinet5.jpg" alt="Педикюрное кресло">
+                    <div class="cabinet-caption">Удобное педикюрное кресло</div>
+                </div>
+                <div class="cabinet-item" onclick="openCabinetLightbox(3)">
+                    <img src="cabinet7.jpg" alt="Кресло для маникюра">
+                    <div class="cabinet-caption">Кресло для маникюра</div>
+                </div>
+                <div class="cabinet-item" onclick="openCabinetLightbox(4)">
+                    <img src="cabinet2.jpg" alt="Аппарат для маникюра">
+                    <div class="cabinet-caption">Профессиональное оборудование</div>
+                </div>
+                <div class="cabinet-item" onclick="openCabinetLightbox(5)">
+                    <img src="cabinet4.jpg" alt="Стерилизатор">
+                    <div class="cabinet-caption">Стерилизация инструментов — наша гордость</div>
+                </div>
+                <div class="cabinet-item" onclick="openCabinetLightbox(6)">
+                    <img src="cabinet6.jpg" alt="Зона комфорта">
+                    <div class="cabinet-caption">Чай и вода для гостей</div>
+                </div>
+                <div class="cabinet-item" onclick="openCabinetLightbox(7)">
+                    <img src="cabinet8.jpg" alt="Входная дверь">
+                    <div class="cabinet-caption">Вход с улицы Одоевского</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- О мастерах -->
+    <section class="about-masters" id="masters">
+        <div class="container">
+            <h2 class="section-title">Наши мастера</h2>
+            <div class="masters-grid">
+                <div class="master-card">
+                    <img src="lubov.jpg" alt="Любовь Казнакова — подолог" class="master-photo">
+                    <h3>Любовь Казнакова</h3>
+                    <div class="master-role">Подолог</div>
+                    <p class="master-desc">Профессиональный подолог. Специализируется на обработке и восстановлении стоп: вросшие ногти, мозоли, натоптыши, трещины, бородавки. Проводит функциональные тесты, изготавливает индивидуальные стельки и ортезы. Работает со сложными случаями любой сложности.</p>
+                </div>
+                <div class="master-card">
+                    <img src="dina.jpg" alt="Дина Джабали — подолог, мастер маникюра/педикюра" class="master-photo">
+                    <h3>Дина Джабали</h3>
+                    <div class="master-role">Подолог, мастер маникюра/педикюра</div>
+                    <p class="master-desc">Подолог, мастер маникюра/педикюра с медицинским образованием. Выполняет профессиональную обработку стоп, гигиенический маникюр и подологический педикюр. Сочетает заботу о здоровье ногтей и стоп с эстетической составляющей.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Услуги -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Услуги и цены</h2>
+            <p class="services-intro">
+                Мы предлагаем профессиональную обработку и восстановление стоп и ногтей. Точные цены и доступное время смотрите в профиле на Dikidi.
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🔹 Обработка и восстановление стоп</h3>
+                    <ul class="cases-list">
+                        <li>Вросшие ногти</li>
+                        <li>Бородавки</li>
+                        <li>Ногти любой сложности</li>
+                        <li>Трещины, мозоли, натоптыши</li>
+                        <li>Гиперкератоз</li>
+                    </ul>
+                    <ul class="price-list" style="margin-top: 1rem;">
+                        <li><span>Первичная консультация</span> <span class="price">40 руб.</span></li>
+                        <li><span>Обработка вросшего ногтя</span> <span class="price">от 50 руб.</span></li>
+                        <li><span>Обработка мозолей</span> <span class="price">от 55 руб.</span></li>
+                        <li><span>Чистка ногтевых пластин (травма, онихолизис, микоз и др.)</span> <span class="price">от 45 руб.</span></li>
+                        <li><span>Подологический педикюр</span> <span class="price">90 руб.</span></li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>💅 Маникюр и педикюр</h3>
+                    <ul class="cases-list">
+                        <li>Гигиенический маникюр</li>
+                        <li>Покрытие гель-лаком</li>
+                    </ul>
+                    <ul class="price-list" style="margin-top: 1rem;">
+                        <li><span>Гигиенический маникюр</span> <span class="price">60 руб.</span></li>
+                        <li><span>Гигиенический маникюр с покрытием</span> <span class="price">от 70 руб.</span></li>
+                        <li><span>Подологический педикюр с покрытием</span> <span class="price">от 75 руб.</span></li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>✨ Дополнительные услуги</h3>
+                    <ul class="cases-list">
+                        <li>Индивидуальные стельки</li>
+                        <li>Ортезы</li>
+                        <li>SPA-уход</li>
+                    </ul>
+                    <ul class="price-list" style="margin-top: 1rem;">
+                        <li><span>Индивидуальные стельки</span> <span class="price">180 руб.</span></li>
+                        <li><span>Индивидуальные ортезы</span> <span class="price">75 руб.</span></li>
+                        <li><span>SPA-уход</span> <span class="price">от 25 руб.</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p class="price-note">
+                📌 Точные цены и свободное время смотрите в нашем профиле на 
+                <a href="https://dikidi.net/2047090" target="_blank" style="color: var(--primary-dark);">Dikidi</a>
+            </p>
+        </div>
+    </section>
+    
+    <!-- Галерея -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Наши динамики</h2>
+            <p style="text-align:center; color: var(--text-light); margin-bottom: 2rem;">
+                Результаты работы: до и после. Нажмите на фото, чтобы увеличить.
+            </p>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox(0)">
+                    <img src="work1.jpg" alt="Работа с микозной стопой">
+                    <div class="gallery-caption">
+                        <h4>Микозная стопа</h4>
+                        <p>Работа с микозной стопой</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(1)">
+                    <img src="work2.jpg" alt="Работа с микозной стопой">
+                    <div class="gallery-caption">
+                        <h4>Микозная стопа</h4>
+                        <p>Работа с микозной стопой</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(2)">
+                    <img src="work3.jpg" alt="Онихолизис">
+                    <div class="gallery-caption">
+                        <h4>Онихолизис</h4>
+                        <p>Без удаления нестабильной части ногтевой пластины</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <img src="work4.jpg" alt="Бородавка">
+                    <div class="gallery-caption">
+                        <h4>Бородавка</h4>
+                        <p>Понадобилось 2 прижигания</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(4)">
+                    <img src="work5.jpg" alt="Бородавка">
+                    <div class="gallery-caption">
+                        <h4>Бородавка</h4>
+                        <p>Также 2 прижигания</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(5)">
+                    <img src="work6.jpg" alt="Онихолизис">
+                    <div class="gallery-caption">
+                        <h4>Онихолизис</h4>
+                        <p>Без чистки, меньше чем за 1 месяц ногтевая пластина была восстановлена</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Лайтбокс -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <button class="lightbox-nav lightbox-prev" onclick="prevImage()">&#10094;</button>
+            <img src="" alt="" id="lightboxImg">
+            <div class="lightbox-caption" id="lightboxCaption">
+                <h4></h4>
+                <p></p>
+            </div>
+            <button class="lightbox-nav lightbox-next" onclick="nextImage()">&#10095;</button>
+        </div>
+    </div>
+    
+    <!-- Контакты -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 class="section-title">Контакты и адрес</h2>
+            <div class="contacts-grid">
+                <div class="contact-card">
+                    <h3>📞 Связаться с нами</h3>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div>
+                            <strong>Телефон:</strong><br>
+                            <a href="tel:+375447025572">+375 44 702-55-72</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">💬</span>
+                        <div>
+                            <strong>Telegram-канал:</strong><br>
+                            <a href="https://t.me/+PsbGQA2dg3xmZjhi" target="_blank">Подписаться →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📝</span>
+                        <div>
+                            <strong>Онлайн-запись:</strong><br>
+                            <a href="https://dikidi.net/2047090" target="_blank">Записаться через Dikidi →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Адрес:</strong><br>
+                            г. Минск, ул. Одоевского, 115А, офис 230
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">⏰</span>
+                        <div>
+                            <strong>Режим работы:</strong><br>
+                            Уточняйте при записи через Dikidi
+                        </div>
+                    </div>
+                    
+                    <a href="https://dikidi.net/2047090" target="_blank" class="btn" style="margin-top: 1rem; width: 100%;">
+                        📝 Записаться онлайн
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>🗺️ Как добраться</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">
+                        г. Минск, ул. Одоевского, 115А, офис 230
+                    </p>
+                    <div class="map-container">
+                        <div id="yandex-map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Футер -->
+    <footer>
+        <p>© 2026 LD lab podology — Любовь Казнакова и Дина Джабали</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+            <a href="https://dikidi.net/2047090" target="_blank">Dikidi</a> | 
+            <a href="https://t.me/+PsbGQA2dg3xmZjhi" target="_blank">Telegram</a>
+        </p>
+    </footer>
+    
+    <!-- Яндекс.Карты API -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    
+    <script>
+        // Инициализация Яндекс.Карты
+        ymaps.ready(init);
+        function init() {
+            var myMap = new ymaps.Map("yandex-map", {
+                center: [53.901571, 27.476680],
+                zoom: 18,
+                controls: ['zoomControl', 'searchControl']
+            });
+            
+            var myPlacemark = new ymaps.Placemark([53.901571, 27.476680], {
+                hintContent: 'LD lab podology',
+                balloonContent: '<strong>LD lab podology</strong><br>ул. Одоевского, 115А, офис 230<br>+375 44 702-55-72'
+            }, {
+                preset: 'islands#pinkDotIcon',
+                iconColor: '#C8A4B4'
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+            
+            // Отключить скролл колёсиком (чтобы не мешал прокрутке страницы)
+            myMap.behaviors.disable('scrollZoom');
+            
+            // Включить скролл при клике на карту
+            myMap.events.add('click', function() {
+                myMap.behaviors.enable('scrollZoom');
+            });
+        }
+        
+        // Мобильное меню
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            this.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Закрытие меню при клике на ссылку
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            });
+        });
+        
+        // Лайтбокс для динамик
+        const galleryData = [
+            { src: 'work1.jpg', title: 'Микозная стопа', desc: 'Работа с микозной стопой' },
+            { src: 'work2.jpg', title: 'Микозная стопа', desc: 'Работа с микозной стопой' },
+            { src: 'work3.jpg', title: 'Онихолизис', desc: 'Без удаления нестабильной части ногтевой пластины' },
+            { src: 'work4.jpg', title: 'Бородавка', desc: 'Понадобилось 2 прижигания' },
+            { src: 'work5.jpg', title: 'Бородавка', desc: 'Также 2 прижигания' },
+            { src: 'work6.jpg', title: 'Онихолизис', desc: 'Без чистки, меньше чем за 1 месяц ногтевая пластина была восстановлена' }
+        ];
+        
+        // Лайтбокс для кабинета
+        const cabinetData = [
+            { src: 'cabinet3.jpg', title: 'Наш кабинет', desc: 'Просторный светлый кабинет с двумя рабочими местами' },
+            { src: 'cabinet1.jpg', title: 'Зона ожидания', desc: 'Уютный диван и зеркало «You look amazing»' },
+            { src: 'cabinet5.jpg', title: 'Педикюрное кресло', desc: 'Удобное кресло для комфортных процедур' },
+            { src: 'cabinet7.jpg', title: 'Маникюрное кресло', desc: 'Эргономичное кресло для маникюра' },
+            { src: 'cabinet2.jpg', title: 'Профессиональное оборудование', desc: 'Аппарат для аппаратного маникюра и педикюра' },
+            { src: 'cabinet4.jpg', title: 'Стерилизация', desc: 'Сухожаровой шкаф «Витязь» — полная стерилизация инструментов' },
+            { src: 'cabinet6.jpg', title: 'Зона комфорта', desc: 'Чистая питьевая вода и чай для гостей' },
+            { src: 'cabinet8.jpg', title: 'Вход в кабинет', desc: 'ул. Одоевского, 115А, офис 230 — вход с улицы' }
+        ];
+        
+        let currentImageIndex = 0;
+        let currentGallery = galleryData;
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        
+        function openLightbox(index) {
+            currentGallery = galleryData;
+            currentImageIndex = index;
+            updateLightbox();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function openCabinetLightbox(index) {
+            currentGallery = cabinetData;
+            currentImageIndex = index;
+            updateLightbox();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLightbox(event) {
+            if (!event || event.target === lightbox || event.target.classList.contains('lightbox-close')) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+        
+        function updateLightbox() {
+            const data = currentGallery[currentImageIndex];
+            lightboxImg.src = data.src;
+            lightboxImg.alt = data.title;
+            lightboxCaption.querySelector('h4').textContent = data.title;
+            lightboxCaption.querySelector('p').textContent = data.desc;
+        }
+        
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % currentGallery.length;
+            updateLightbox();
+        }
+        
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + currentGallery.length) % currentGallery.length;
+            updateLightbox();
+        }
+        
+        // Навигация клавишами
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+        
+        // Свайп на мобильных
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        lightbox.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        lightbox.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextImage();
+                } else {
+                    prevImage();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
